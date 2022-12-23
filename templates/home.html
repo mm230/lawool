@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lawool ngol</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <nav class="navbar navbar-expand-lg bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Lawool ngol</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Nos Villes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <body>
+    <div class="container">
+      <div class="container-fluid text-sm-center py-2 bg-light mt-3">
+        <!-- bg-light is background color & p-5 is padding -->
+        <h1 class="display-2">Les routes du Sénégal</h1>
+        <p class="lead">Nous vous aidons à trouver le plus court chemin!</p>
+      </div>
+
+      <!-- card -->
+
+      <div class="card mt-3">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Senegal%2C_administrative_divisions_in_colour_2.svg/2560px-Senegal%2C_administrative_divisions_in_colour_2.svg.png"
+          class="card-img-top"
+          alt="..."
+          style="width: 100%; height: 110vh"
+        />
+        <div class = "card-header text-center"> 
+          <h4>Les routes du Sénégal</h4>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Recherche</h3>
+          <p class="card-text">
+            Choisir vos Villes de départ et de destination
+          </p>
+          <!-- form -->
+          <form
+            class="form-horizontal row row-cols-lg"
+            action="{{url_for('distance')}}"
+            method="POST"
+          >
+          <div class="row align-items-center mx-auto">
+            <div class="col-md-3 my-3 col-sm-12">
+              <div class="form-floating">
+                <select name="source" class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                  <option selected>Dakar</option>
+                  <option value="Bakel">Bakel</option>
+                  <option value="Bambey">Bambey</option>
+                  <option value="Banjul">Banjul</option>
+                  <option value="Bignona">Bignona</option>
+                  <option value="Birkelane">Birkelane</option>
+                  <option value="Bounkiling">Bounkiling</option>
+                  <option value="Dagana">Dagana</option>
+                  <option value="Dahra">Dahra</option>
+                  <option value="Dakar">Dakar</option>
+                  <option value="Diourbel">Diourbel</option>
+                  <option value="Farafenni">Farafenni</option>
+                  <option value="Fatick">Fatick</option>
+                  <option value="Foundiougne">Foundiougne</option>
+                  <option value="Gossas">Gossas</option>
+                  <option value="Goudiry">Goudiry</option>
+                  <option value="Goudomp">Goudomp</option>
+                  <option value="Guediawaye">Guédiawaye</option>
+                  <option value="Guinguineo">Guinguineo</option>
+                  <option value="Kaffrine">Kaffrine</option>
+                  <option value="Kanel">Kanel</option>
+                  <option value="Kaolack">Kaolack</option>
+                  <option value="Kebemer">Kébémer</option>
+                  <option value="Kedougou">Kedougou</option>
+                  <option value="Keur Massar">Keur Massar</option>
+                  <option value="Kidira">Kidira</option>
+                  <option value="Kolda">Kolda</option>
+                  <option value="Koumpentoum">Koumpentoum</option>
+                  <option value="Koungheul">Koungheul</option>
+                  <option value="Linguere">Linguère</option>
+                  <option value="Louga">Louga</option>
+                  <option value="Malem-Hodar">Malem-Hodar</option>
+                  <option value="Matam">Matam</option>
+                  <option value="Mbacke">Mbacke</option>
+                  <option value="Mbour">Mbour</option>
+                  <option value="Medina Yoro Foulah">Médina Yoro Foulah</option>
+                  <option value="Nioro">Nioro</option>
+                  <option value="Oussouye">Oussouye</option>
+                  <option value="Pikine">Pikine</option>
+                  <option value="Podor">Podor</option>
+                  <option value="Ranerou">Ranerou</option>
+                  <option value="Richard-Toll">Richard-Toll</option>
+                  <option value="Rufisque">Rufisque</option>
+                  <option value="Saint-Louis">Saint-Louis</option>
+                  <option value="Salemata">Salemata</option>
+                  <option value="Saraya">Saraya</option>
+                  <option value="Sedhiou">Sedhiou</option>
+                  <option value="Soma">Soma</option>
+                  <option value="Tambacounda">Tambacounda</option>
+                  <option value="Thies">Thiès</option>
+                  <option value="Tivaouane">Tivaouane</option>
+                  <option value="Velingara">Vélingara</option>
+                  <option value="Ziguinchor">Ziguinchor</option>
+                </select>
+                <label for="floatingSelectGrid">Départ</label>
+              </div>
+            </div>
+            <div class="col-md-3 my-3 col-sm-12">
+              <div class="form-floating">
+                <select name="target" class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                  <option selected>Kaolack</option>
+                  <option value="Bakel">Bakel</option>
+                  <option value="Bambey">Bambey</option>
+                  <option value="Banjul">Banjul</option>
+                  <option value="Bignona">Bignona</option>
+                  <option value="Birkelane">Birkelane</option>
+                  <option value="Bounkiling">Bounkiling</option>
+                  <option value="Dagana">Dagana</option>
+                  <option value="Dahra">Dahra</option>
+                  <option value="Dakar">Dakar</option>
+                  <option value="Diourbel">Diourbel</option>
+                  <option value="Farafenni">Farafenni</option>
+                  <option value="Fatick">Fatick</option>
+                  <option value="Foundiougne">Foundiougne</option>
+                  <option value="Gossas">Gossas</option>
+                  <option value="Goudiry">Goudiry</option>
+                  <option value="Goudomp">Goudomp</option>
+                  <option value="Guediawaye">Guédiawaye</option>
+                  <option value="Guinguineo">Guinguineo</option>
+                  <option value="Kaffrine">Kaffrine</option>
+                  <option value="Kanel">Kanel</option>
+                  <option value="Kaolack">Kaolack</option>
+                  <option value="Kebemer">Kébémer</option>
+                  <option value="Kedougou">Kedougou</option>
+                  <option value="Keur Massar">Keur Massar</option>
+                  <option value="Kidira">Kidira</option>
+                  <option value="Kolda">Kolda</option>
+                  <option value="Koumpentoum">Koumpentoum</option>
+                  <option value="Koungheul">Koungheul</option>
+                  <option value="Linguere">Linguère</option>
+                  <option value="Louga">Louga</option>
+                  <option value="Malem-Hodar">Malem-Hodar</option>
+                  <option value="Matam">Matam</option>
+                  <option value="Mbacke">Mbacke</option>
+                  <option value="Mbour">Mbour</option>
+                  <option value="Medina Yoro Foulah">Médina Yoro Foulah</option>
+                  <option value="Nioro">Nioro</option>
+                  <option value="Oussouye">Oussouye</option>
+                  <option value="Pikine">Pikine</option>
+                  <option value="Podor">Podor</option>
+                  <option value="Ranerou">Ranerou</option>
+                  <option value="Richard-Toll">Richard-Toll</option>
+                  <option value="Rufisque">Rufisque</option>
+                  <option value="Saint-Louis">Saint-Louis</option>
+                  <option value="Salemata">Salemata</option>
+                  <option value="Saraya">Saraya</option>
+                  <option value="Sedhiou">Sedhiou</option>
+                  <option value="Soma">Soma</option>
+                  <option value="Tambacounda">Tambacounda</option>
+                  <option value="Thies">Thiès</option>
+                  <option value="Tivaouane">Tivaouane</option>
+                  <option value="Velingara">Vélingara</option>
+                  <option value="Ziguinchor">Ziguinchor</option>
+                </select>
+                <label for="floatingSelectGrid">Destination</label>
+              </div>
+            </div>
+            <div class="col-md-3 my-3 col-sm-12">
+              <div class="form-floating">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  Chercher
+                </button> 
+              </div> 
+            </div>
+          </div> 
+          </form>
+          <p class="card-text mt-3">
+            <small class="text-muted"
+              >Exemple: Ziguinchor, Tambacounda, Velingara, Kolda,...</small
+            >
+          </p>
+          
+        </div>
+      </div>
+    </div>
+    <!-- liste -->
+
+  
+   
+
+
+    <!-- text -->
+
+    <div class="container mt-4">
+      <div class="my-2 p-1">
+          <h2>Sénégal</h2>
+          <p>
+            Le Sénégal est un pays de l'Afrique de l'Ouest qui partage 
+            la frontière avec le Mali, la Mauritanie et les deux Guinée 
+            (Bissau et Conackry). C'est un pays qui se compose de 14 régions
+            et 46 départements. Cette application permet de calculer la distance 
+            les différentes villes du pays en utilisant l'algorithme du plus court
+            chemin plus connu sous sous  le nom de Djikstra. 
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer class="container-fluid text-center">
+      <p>
+        <a href="https://www.uvs.sn/nos-formations/pole-sciences-technologie-et-numerique/big-data-ANALYTICS/" title="UVS"
+          >BIG DATA ANALYTICS</a
+        >
+      </p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

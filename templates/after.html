@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Votre itinéraire</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <nav class="navbar navbar-expand-lg bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Lawool ngol</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Nos Villes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <body>
+    <div class="container">
+      <div class="container-fluid text-sm-center p-5 bg-light mt-5">
+        <!-- bg-light is background color & p-5 is padding -->
+        <h1 class="display-2">Les routes du Sénégal</h1>
+        <p class="lead">Nous vous aidons à trouver le plus court chemin!</p>
+      </div>
+
+      <!-- card -->
+
+      <div class="card text-center my-3">
+        <div class="card-header">Résultats</div>
+        <div class="card-body">
+          <p class="card-text">Le trajet le plus rapide de
+          <strong class="text-warning"> {{ data[0] }}</strong>
+          à
+          <strong class="text-warning">{{ data[1] }}</strong>
+          est {% set cities = data[2] %}
+          <div class="card-text">
+            <ul>
+              {% for city in cities %}
+              <span class="badge h4 text-bg-light" >
+              {{ city }} 
+              {% if not loop.last %}
+                  ->
+              {% endif %}
+            </span>
+              {% endfor %}
+            </ul>
+            Sa longueur est
+            <button class="badge bg-primary rounded-pill">{{ data[3] }}</button>
+            Kilomètres
+          </div>
+        </p>
+          <a href="/" class="btn btn-success">Retour à l'accueil ?</a>
+        </div>
+      </div>
+
+
+       <!-- text -->
+
+    <div class="container mt-4">
+      <div class="my-2 p-1">
+          <h2>Sénégal</h2>
+          <p>
+            Le Sénégal est un pays de l'Afrique de l'Ouest qui partage 
+            la frontière avec le Mali, la Mauritanie et les deux Guinée 
+            (Bissau et Conackry). C'est un pays qui se compose de 14 régions
+            et 46 départements. Cette application permet de calculer la distance 
+            les différentes villes du pays en utilisant l'algorithme du plus court
+            chemin plus connu sous sous  le nom de Djikstra. 
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer class="container-fluid text-center">
+      <p>
+        <a href="https://www.uvs.sn/nos-formations/pole-sciences-technologie-et-numerique/big-data-ANALYTICS/" title="UVS"
+          >BIG DATA ANALYTICS</a
+        >
+      </p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
