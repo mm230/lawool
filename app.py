@@ -16,16 +16,16 @@ def home():
 
 @app.route("/result", methods=["POST"])
 def distance():
-    source_a = request.form['source']
-    target_b = request.form['target']
+    source = request.form['source']
+    target = request.form['target']
 
-    road_to = nx.dijkstra_path(Graph, source_a, target_b)
+    road_to = nx.dijkstra_path(Graph, source, target)
 
     
-    path_length = round(nx.dijkstra_path_length(Graph, source_a, target_b), 2)
+    path_length = round(nx.dijkstra_path_length(Graph, source, target), 2)
   
 
-    return render_template("after.html", data =[source_a, target_b, road_to, path_length])
+    return render_template("results.html", data =[source, target, road_to, path_length])
 
 
 
