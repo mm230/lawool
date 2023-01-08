@@ -10,6 +10,7 @@ Dataset from:
   
   
   
- pour executer l'application:  python app.py 
+ pour executer l'application:  
+ * ```$ Python app.py```
 
 Lien vers le site : https://lawool-gol.onrender.com/
